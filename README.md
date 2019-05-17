@@ -9,7 +9,7 @@ Then add `reason-hooks-testing-library` to `bs-dev-dependencies` in your `bsconf
 
 ```json
 {
-  "bs-dev-dependencies": ["@glennsl/bs-jest", "reason-react"]
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "reason-hooks-testing-library"]
 }
 ```
 
