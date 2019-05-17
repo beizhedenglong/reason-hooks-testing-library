@@ -7,8 +7,17 @@
     "clean": "bsb -clean-world",
     "test": "jest"
   },
+  "description": "ReasonReact hooks testing library.",
+  "homepage": "https://github.com/beizhedenglong/reason-hooks-testing-library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beizhedenglong/reason-hooks-testing-library"
+  },
+  "bugs": {
+    "url": "https://github.com/beizhedenglong/reason-hooks-testing-library/issues"
+  },
   "keywords": [
-    "BuckleScript"
+    "BuckleScript", "testing", "hooks"
   ],
   "author": "",
   "license": "MIT",
