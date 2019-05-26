@@ -1,12 +1,9 @@
 module Result = {
-  [@bs.deriving abstract]
+  [@bs.deriving {abstract: light}]
   type current('value) = {current: 'value};
 
-  [@bs.deriving abstract]
+  [@bs.deriving {abstract: light}]
   type t('value) = {result: current('value)};
-
-  [@bs.get] external current: current('value) => 'value = "current";
-  [@bs.get] external result: t('value) => current('value) = "result";
 };
 
 [@bs.module "react-hooks-testing-library"]
