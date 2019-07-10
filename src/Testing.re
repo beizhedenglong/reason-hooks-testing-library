@@ -8,7 +8,9 @@ module Result = {
 
 module Options = {
   [@bs.deriving {abstract: light}]
-  type t = {
+  type t('props) = {
+    [@bs.optional]
+    initialProps: 'props,
     [@bs.optional]
     wrapper: React.component({. "children": React.element}),
   };
@@ -16,7 +18,7 @@ module Options = {
 
 [@bs.module "@testing-library/react-hooks"]
 external renderHook:
-  ([@bs.uncurry] (unit => 'hook), ~options: Options.t=?, unit) =>
+  ([@bs.uncurry] ('props => 'hook), ~options: Options.t('props)=?, unit) =>
   Result.t('hook) =
   "renderHook";
 
