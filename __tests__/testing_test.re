@@ -1,6 +1,6 @@
 open Jest;
 open Expect;
-open ReasonHooksTestingLibrary.Testing;
+open Testing;
 
 type counterType = {
   counter: int,
@@ -13,7 +13,7 @@ let useCounter = initial => {
 
 describe("useCounter", () => {
   open Result;
-  let container = renderHook(() => useCounter(0));
+  let container = renderHook(() => useCounter(0), ());
   test("counter is 0", () =>
     expect(container->result->current.counter) |> toEqual(0)
   );

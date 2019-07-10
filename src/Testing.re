@@ -6,9 +6,19 @@ module Result = {
   type t('value) = {result: current('value)};
 };
 
-[@bs.module "react-hooks-testing-library"]
-external renderHook: ([@bs.uncurry] (unit => 'hook)) => Result.t('hook) =
+module Options = {
+  [@bs.deriving {abstract: light}]
+  type t = {
+    [@bs.optional]
+    wrapper: React.component({. "children": React.element}),
+  };
+};
+
+[@bs.module "@testing-library/react-hooks"]
+external renderHook:
+  ([@bs.uncurry] (unit => 'hook), ~options: Options.t=?, unit) =>
+  Result.t('hook) =
   "renderHook";
 
-[@bs.module "react-hooks-testing-library"]
+[@bs.module "@testing-library/react-hooks"]
 external act: ([@bs.uncurry] (unit => unit)) => unit = "act";

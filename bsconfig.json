@@ -14,7 +14,8 @@
     "module": "commonjs",
     "in-source": false
   }],
-  "bs-dev-dependencies": ["@glennsl/bs-jest", "reason-react"],
+  "bs-dependencies": ["reason-react"],
+  "bs-dev-dependencies": ["@glennsl/bs-jest"],
   "suffix": ".bs.js",
   "namespace": true,
   "refmt": 3
