@@ -32,7 +32,7 @@ let useCounter = initial => {
 
 describe("useCounter", () => {
   open Result;
-  let container = renderHook(() => useCounter(0));
+  let container = renderHook(() => useCounter(0), ());
   test("counter is 0", () =>
     expect(container->result->current.counter) |> toEqual(0)
   );
@@ -47,3 +47,5 @@ describe("useCounter", () => {
 });
 
 ```
+[More examples](https://github.com/beizhedenglong/reason-hooks-testing-library/tree/master/__tests__)
+
