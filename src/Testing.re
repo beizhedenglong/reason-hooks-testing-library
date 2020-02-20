@@ -23,4 +23,10 @@ external renderHook:
   "renderHook";
 
 [@bs.module "@testing-library/react-hooks"]
-external act: ([@bs.uncurry] (unit => unit)) => unit = "act";
+external jsAct: ([@bs.uncurry] (unit => Js.undefined('a))) => unit = "act";
+
+let act = callback =>
+  jsAct(() => {
+    callback();
+    Js.undefined;
+  });
